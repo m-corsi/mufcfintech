@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://bbysaurio:bbysaurio@cluster0.cnd20t8.mongodb.net/mufcfintech?retryWrites=true&w=majority&appName=Cluster0
+server:
+  port: 8080
+  servlet:
+    context-path: /mufcfintech
