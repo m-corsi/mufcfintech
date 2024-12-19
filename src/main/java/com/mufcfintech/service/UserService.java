@@ -39,14 +39,14 @@ public class UserService {
         return userOptional.map(UserMapper::convertEntityToUserApi);
     }
 
-    public UserApi upsertUser(UserApi userApi) {
+    public UserApi modifyUser(UserApi userApi) {
         Optional<User> userOptional = userDAO.findById(userApi.getId());
         if(userOptional.isPresent()) {
             User user = userOptional.get();
             UserMapper.setUserEntity(user, userApi);
             return UserMapper.convertEntityToUserApi(user);
         } else {
-            return this.createUser(userApi);
+            return null;
         }
     }
 

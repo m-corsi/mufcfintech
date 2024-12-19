@@ -40,9 +40,9 @@ public class UserController {
     }
 
     @PutMapping
-    public ResponseEntity<UserApi> upsertUser (@RequestBody UserApi userApi) {
-        UserApi updatedUser = userService.upsertUser(userApi);
-        return ResponseEntity.ok(updatedUser);
+    public ResponseEntity<UserApi> modifyUser (@RequestBody UserApi userApi) {
+        UserApi modifiedUser = userService.modifyUser(userApi);
+        return ResponseEntity.ok(modifiedUser);
     }
 
     @DeleteMapping("/{id}")
